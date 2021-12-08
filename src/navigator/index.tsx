@@ -8,6 +8,7 @@ import React from "react";
 import { NavigationContainer} from "@react-navigation/native";
 import { CardStyleInterpolators, createStackNavigator, HeaderStyleInterpolators, StackNavigationProp} from "@react-navigation/stack";
 import BottomTabs from "./BottomTabs";
+
 import { Platform, StyleSheet} from "react-native";
 
 // 定义堆栈式导航
@@ -16,6 +17,7 @@ export type RootStackParamList = {
     BottomTabs: {
         screen?: string;
     };
+   
 }
 
 // 创建堆栈式导航
@@ -39,14 +41,11 @@ class Navigator extends React.Component {
                                elevation: 0,
                                borderBottomWidth: StyleSheet.hairlineWidth,
                             },
-                            ios: {
-
-                            }
                         })
                     }
                    }}
                    >
-                 <Stack.Screen name="BottomTabs" component={BottomTabs} options={{headerTitle: "首页"}}/>
+                 <Stack.Screen name="BottomTabs" component={BottomTabs} options={{headerTitle: "首页"}}/>     
                 </Stack.Navigator>
             </NavigationContainer>
         )

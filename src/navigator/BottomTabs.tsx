@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteProp, TabNavigationState, NavigationContainer, getFocusedRouteNameFromRoute} from "@react-navigation/native";
+import { RouteProp, TabNavigationState,  getFocusedRouteNameFromRoute} from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { RootStackNavigation, RootStackParamList } from "./index";
 import Home from "@/pages/Home"
@@ -41,15 +41,12 @@ function getHeaderTitle(route: Route) {
       }
   }
 class BottomTabs extends React.Component<IProps> {
-    componentDidUpdate() {
-       
-       const { navigation, route } = this.props;
-       console.dir(navigation)
-    //    navigation.reset();
-       navigation.setOptions({
-           headerTitle: getHeaderTitle(route)
-       })
-    }
+    // componentDidUpdate() {
+    //    const { navigation, route } = this.props;
+    //    navigation.setOptions({
+    //        headerTitle: getHeaderTitle(route)
+    //    })
+    // }
     
     render() {
         return (
